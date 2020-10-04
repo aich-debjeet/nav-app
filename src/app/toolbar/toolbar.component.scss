@@ -1,0 +1,44 @@
+.diff-state{
+  float: right;
+}
+
+.selected{
+    color:gray;
+  }
+  .active{
+    color: blue;
+  }
+  .inActive{
+    color:rgb(206, 192, 192);
+  }
+  .toggle{
+    border-radius: 50%;
+    background-color: blue;
+    color: #f3f1e8;
+    border-style: solid;
+    border-color: blue;
+    border-width: 5px;
+  }
+
+  .container{
+    width: 100%;
+    float: left;
+    padding: 8px 40px;
+    margin: 0px 0px 12px 0px !important;
+}
+.main{
+  display: flex;
+    height: 40px;
+    float: left;
+}
+.nav-icon-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  
+  position: relative;
+}
+.nav-icon__item {
+  padding: 0px 12px;
+  float: right;
+}

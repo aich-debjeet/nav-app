@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="display">
+    <label for="cars" *ngIf="sampleValue">{{sampleId}}:{{sampleValue}}</label>
+    <select name="cars" id="cars" (change)="changeOptions($event.target.value)">
+      <option value="" disabled>select one</option>
+      <option [value]="cars" *ngFor="let cars of dropdownList">{{cars}}</option>
+    </select>
+  </div>
+  <tabset #staticTabs type="pills">
+    <tab *ngFor="let tabz of tabs" [heading]="tabz.title" [active]="tabz.active" (selectTab)="onSelect($event)"
+      [customClass]="tabz.customClass">
+      <app-toolbar></app-toolbar>
+      <hr class="solid">
+      <div [ngSwitch]="tabz?.content">
+        <ng-container *ngSwitchCase="'Title 1 selected'">
+          <ul>
+            <li>
+              {{tabz?.content}}
+            </li>
+          </ul>
+        </ng-container>
+        <ng-container *ngSwitchCase="'Title 2 selected'">
+          <ul>
+            <li>
+              {{tabz?.content}}
+            </li>
+          </ul>
+
+        </ng-container>
+        <ng-container *ngSwitchCase="'Title 3 selected'">
+          <ul>
+            <li>
+              {{tabz?.content}}
+            </li>
+            <li>
+              <button type="button" class="btn btn-primary btn-sm" (click)="selectTab(0)">Route To Tab1</button>
+            </li>
+          </ul>
+        </ng-container>
+      </div>
+    </tab>
+    <app-e-charts *ngIf="displayCharts"></app-e-charts>
+  </tabset>
+</div>

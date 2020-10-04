@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="main">
+        <div style="margin-right: 21px;">
+            <i class="fa fa-long-arrow-left" (click)="goBack()" aria-hidden="true"></i>
+            {{this.currentIndex + 1}}/ {{displayArray.length}}
+            <i class="fa fa-long-arrow-right" (click)="goForward()" aria-hidden="true"></i>
+        </div>
+        <div>
+            <p>{{this.currentId}}: {{this.currentInfo}}</p>
+        </div>
+    </div>
+
+    <div class="diff-state">
+        <ul class="nav-icon-list">
+            <li class="nav-icon__item">
+                <i class="fa fa-heartbeat selected" #heart (click)="changeColor('heart')" aria-hidden="true"
+                    style=" margin-right:10px;"></i>
+            </li>
+            <li class="nav-icon__item">
+                <i class="fa fa-filter selected" #filter (click)="changeColor('filter')" aria-hidden="true"
+                    style=" margin-right:10px;"></i>
+            </li>
+            <li class="nav-icon__item">
+                <i class="fa fa-calendar-o selected" #calendar (click)="changeColor('calendar')" aria-hidden="true"
+                    style=" margin-right:10px; "></i>
+            </li>
+            <li class="nav-icon__item">
+                <i class="fa fa-share-alt selected" #share (click)="changeColor('share')" aria-hidden="true"
+                    style=" margin-right:10px;"></i>
+            </li>
+        </ul>
+    </div>
+</div>
